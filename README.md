@@ -2,7 +2,7 @@
 
 ## Descrição
 
-O `fiappi-hospital` são dois microserviços desenvolvidos como parte do Tech Challenge da FIAP, com foco no gerenciamento de agendamento de consultas e notificações. Este serviço permite operações básicas de CRUD de usuários e consultas utilizando Java 17, Spring Boot 3 e PostgreSQL.
+O `fiappi-hospital` são dois microserviços desenvolvidos como parte do Tech Challenge da FIAP, com foco no gerenciamento de agendamento de consultas e notificações. Este serviço permite operações básicas de CRUD de usuários e consultas utilizando Java 17, Spring Boot 3, GraphQL e PostgreSQL.
 
 Este projeto faz parte do Pós Graduação Tech Arquitetura Java da [FIAP](https://www.fiap.com.br/) e visa consolidar conhecimentos em backend com Java e arquitetura de sistemas.
 
