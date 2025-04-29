@@ -36,7 +36,6 @@
     <modules>
         <module>appointment</module>
         <module>notification</module>
-        <module>proto</module>
     </modules>
 
     <properties>
