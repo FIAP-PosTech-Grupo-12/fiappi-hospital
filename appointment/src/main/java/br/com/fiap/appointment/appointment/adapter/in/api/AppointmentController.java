@@ -20,7 +20,7 @@ public class AppointmentController {
         return ResponseEntity.status(HttpStatus.CREATED.value()).body("ID: ".concat(service.createAppointment(dto).toString()));
     }
 
-    @PostMapping("/{id}")
+    @PatchMapping("/{id}")
     public ResponseEntity<Void> updateAppointment(@PathVariable Long id, @RequestBody UpdateAppointmentDTO dto) {
         service.updateAppointment(id, dto);
         return ResponseEntity.ok().build();
