@@ -23,6 +23,7 @@ public class User {
             sequenceName = "user_seq", schema = "fiap", allocationSize = 1)
     private Long id;
 
+    @Getter
     private String name;
 
     @Enumerated(EnumType.STRING)
