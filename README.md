@@ -12,6 +12,8 @@ Este projeto faz parte do Pós Graduação Tech Arquitetura Java da [FIAP](https
 - Excluir permanentemente um usuário do sistema. 
 - Criar agendamento de consulta
 - Atualizar agendamento de consulta
+- Consultar agendamentos pelo período
+- Consultar agendamentos pelo período e id usuário
 
 ---
 
@@ -55,18 +57,20 @@ A documentação da API pode ser acessada por meio do Swagger UI, gerado automat
 
 Essa documentação permite explorar e testar todos os endpoints diretamente no navegador.
 
-Alternativamente, pode-se utilizar uma coleção de requisições, na qual é fornecida por um arquivo e importado pela aplicação [Postman](https://www.postman.com/downloads/), esse arquivo está localizado na pasta /src/main/resources/postman.
+Alternativamente, pode-se utilizar uma coleção de requisições, na qual é fornecida por um arquivo e importado pela aplicação [Postman](https://www.postman.com/downloads/), esse arquivo está localizado na raíz do projeto e chamado de postman_collection.json.
 
 ---
 
 ## Endpoints da API
 
-| Método | Endpoint                | Descrição                                          |
-|--------|-------------------------|----------------------------------------------------|
-| POST   | `/v1/users`             | Criação de usuário                                 |
-| DELETE | `/v1/users/{id}`        | Excluir usuário (Administrador ou próprio usuário) |
-| POST   | `/v1/appointment`       | Cria um agendamento                                |
-| PATCH  | `/v1/appointment/{id}`  | Atualiza em agendamento pelo ID                    |
+| Método       | Endpoint               | Descrição                                                       |
+|--------------|------------------------|-----------------------------------------------------------------|
+| POST         | `/v1/users`            | Criação de usuário                                              |
+| DELETE       | `/v1/users/{id}`       | Excluir usuário                                                 |
+| POST         | `/v1/appointment`      | Cria um agendamento                                             |
+| PATCH        | `/v1/appointment/{id}` | Atualiza em agendamento pelo ID                                 |
+| QueryMapping | `/graphql`             | Recupera agendamentos pelo periodo ou pelo id usuário e periodo |
+
 ---
 
 ## Considerações Finais
