@@ -2,7 +2,7 @@
 
 ## Descrição
 
-O `fiappi-hospital` são dois microserviços desenvolvidos como parte do Tech Challenge da FIAP, com foco no gerenciamento de agendamento de consultas e notificações. Este serviço permite operações básicas de CRUD de usuários e consultas utilizando Java 17, Spring Boot 3, GraphQL e PostgreSQL.
+O `fiappi-hospital` são dois microserviços desenvolvidos como parte do Tech Challenge da FIAP, com foco no gerenciamento de agendamento de consultas e notificações. Esses serviços são comunicados entre si através de um serviço de mensageria RabbitMQ. Além disso, permite operações básicas de CRUD de usuários e consultas utilizando Java 17, Spring Boot 3, GraphQL e PostgreSQL.
 
 Este projeto faz parte do Pós Graduação Tech Arquitetura Java da [FIAP](https://www.fiap.com.br/) e visa consolidar conhecimentos em backend com Java e arquitetura de sistemas.
 
@@ -32,9 +32,8 @@ Este projeto faz parte do Pós Graduação Tech Arquitetura Java da [FIAP](https
 
 ### Pré-requisitos
 
+- Docker e Docker Compose instalados
 - JDK 17 ou superior
-- Banco PostgreSQL local ou docker
-- RabbitMQ docker (docker run -d --name myRabbit -e RABBITMQ_DEFAULT_USER=fiap -e RABBITMQ_DEFAULT_PASS=fiap -p 5672:5672 -p 8030:15672 rabbitmq:3-management)
 
 ### Passos
 
@@ -43,13 +42,15 @@ Este projeto faz parte do Pós Graduação Tech Arquitetura Java da [FIAP](https
    ```bash
    git clone https://github.com/FIAP-PosTech-Grupo-12/fiappi-hospital.git
    ```
+2. Suba o ambiente com Docker Compose:
 
+   ```bash
+   docker compose up 
+   ```
 
 ## Utilização
 
-Para utilização desse sistema, é necessário rodar o primeiro microsserviço (appointment) e o segundo microsserviço (notification).
-
-Posteriormente é necessário criação de um usuário para realizar as requisições dos agendamentos de consultas
+Para utilização desse sistema, é necessário criação de um usuário para realizar as requisições dos agendamentos (criação, atualização e consulta)
 
 A documentação da API pode ser acessada por meio do Swagger UI, gerado automaticamente pelo Springdoc OpenAPI.
 
