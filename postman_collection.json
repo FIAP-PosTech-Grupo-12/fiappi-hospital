@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "03ddbc8c-a8e9-40bd-bab9-b1a0a5c2e020",
+		"name": "Appointments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17691548",
+		"_collection_link": "https://bold-astronaut-559457.postman.co/workspace/1TDSS~c70dd216-7967-428e-ad18-f8dcfd066bb1/collection/17691548-03ddbc8c-a8e9-40bd-bab9-b1a0a5c2e020?action=share&source=collection_link&creator=17691548"
+	},
+	"item": [
+		{
+			"name": "apointment-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\" : 1,\n    \"date\": \"2025-07-02T15:30:00-03:00\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/appointment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apointment-update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\" : 1,\n    \"status\": \"ACCEPTED\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/appointment/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"appointment",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Diego\",\n    \"accessLevel\": \"MEDICO\",\n    \"email\" : \"diego22@gmail.com\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Diego\",\n    \"accessLevel\": \"MEDICO\",\n    \"email\" : \"diego22@gmail.com\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
