@@ -1,0 +1,19 @@
+type Appointment {
+    id: ID!
+    userId: Int
+    userName: String
+    status: String
+    appointmentDate: String
+    updatedAt: String
+}
+
+enum Period {
+    PAST,
+    ALL,
+    FUTURE
+}
+
+type Query {
+    getAppointmentsByPeriod(period: Period = ALL): [Appointment]
+    getAppointmentsByUserIdAndPeriod(userId: Int!, period: Period = ALL): [Appointment]
+}
